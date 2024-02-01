@@ -59,6 +59,7 @@ public class Tracker {
             items[index].setName(item.getName());
         }
         return result;
+
     }
 
     private int indexOf(int id) {
@@ -78,6 +79,7 @@ public class Tracker {
             System.arraycopy(items, index, items, index + 1, size - index - 1);
             items[size - 1] = null;
             size--;
+
         }
     }
 }
