@@ -56,10 +56,11 @@ public class Tracker {
         int index = indexOf(id);
         boolean result = index != -1;
         if (result) {
-            items[index].setName(item.getName());
+            int temp = items[index].getId();
+            item.setId(temp);
+            items[index] = item;
         }
         return result;
-
     }
 
     private int indexOf(int id) {
