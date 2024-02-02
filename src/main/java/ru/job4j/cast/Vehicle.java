@@ -1,4 +1,4 @@
-package ru.job4j.tracker.cast;
+package ru.job4j.cast;
 
 public interface Vehicle {
     void move();

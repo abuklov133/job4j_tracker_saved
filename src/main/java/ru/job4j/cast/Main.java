@@ -1,4 +1,4 @@
-package ru.job4j.tracker.cast;
+package ru.job4j.cast;
 
 public class Main {
     public static void main(String[] args) {

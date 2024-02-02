@@ -1,4 +1,4 @@
-package ru.job4j.tracker.cast;
+package ru.job4j.cast;
 
 public class Bus implements Vehicle {
     private String nameClass = getClass().getSimpleName();
