@@ -5,11 +5,12 @@ import java.util.Arrays;
 public class Tracker {
     private final Item[] items = new Item[100];
     private int ids = 1;
-    private int count = 0;
+    // private int count = 0;
+    private int size = 0;
 
     public Item add(Item item) {
         item.setId(ids++);
-        items[count++] = item;
+        items[size++] = item;
         return item;
     }
 
@@ -19,13 +20,13 @@ public class Tracker {
     }
 
     public Item[] findAll() {
-        return Arrays.copyOf(items, count);
+        return Arrays.copyOf(items, size);
     }
 
     public Item[] findByName(String key) {
-        Item[] result = new Item[items.length];
-        count = 0;
-        for (int i = 0; i < items.length; i++) {
+        Item[] result = new Item[size];
+        int count = 0;
+        for (int i = 0; i < size; i++) {
             if (items[i] != null && items[i].getName().equals(key)) {
                 result[count++] = items[i];
             }
@@ -46,7 +47,7 @@ public class Tracker {
 
     private int indexOf(int id) {
         int result = -1;
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < size; i++) {
             if (items[i].getId() == id) {
                 result = i;
             }
@@ -58,9 +59,9 @@ public class Tracker {
         int index = indexOf(id);
         boolean result = index != -1;
         if (result) {
-            System.arraycopy(items, index, items, index + 1, count - index - 1);
-            items[count - 1] = null;
-            count--;
+            System.arraycopy(items, index, items, index + 1, size - index - 1);
+            items[size - 1] = null;
+            size--;
 
         }
     }
