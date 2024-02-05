@@ -15,5 +15,6 @@ public class Bus implements Transport {
     public double refuel(int fuel) {
         double price = 100;
         return fuel * price;
+
     }
 }
