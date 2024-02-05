@@ -24,6 +24,7 @@ public class Dendy {
                 System.out.println("Такой игры нет.");
             }
             System.out.println();
+
         }
     }
 }
