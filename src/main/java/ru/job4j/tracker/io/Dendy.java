@@ -3,6 +3,7 @@ package ru.job4j.tracker.io;
 import java.util.Scanner;
 
 public class Dendy {
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         boolean run = true;
